@@ -6,15 +6,18 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <% if user_signed_in? %>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
             <%= link_to "", root_path, class: 'fa-solid fa-house', style: 'color: #495057;' %>
         </li>
+
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-dark fa-solid fa-magnifying-glass btn-sm" type="submit"></button>
       </form>
+    <% end %>
 
      <ul class="navbar-nav mb-2 mb-lg-0">
         <% if user_signed_in? %>
